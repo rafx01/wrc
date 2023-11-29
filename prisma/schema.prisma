@@ -15,5 +15,6 @@ model Champions {
   team String 
   driver String
   copilot String
+  car String
   year Int
 }
