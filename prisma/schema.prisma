@@ -11,7 +11,9 @@ model Champions {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   team String 
   driver String
+  driverCountry String
   copilot String
+  copilotCountry String
   car String
   year Int
 }
