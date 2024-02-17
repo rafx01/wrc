@@ -11,15 +11,22 @@
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "@prisma/client": "5.7.1",
+    "@radix-ui/react-slot": "^1.0.2",
     "@remix-run/css-bundle": "^1.19.3",
     "@remix-run/node": "^1.19.3",
     "@remix-run/react": "^1.19.3",
     "@remix-run/serve": "^1.19.3",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "flowbite-react": "^0.7.2",
     "isbot": "^3.6.8",
+    "lucide-react": "^0.331.0",
     "mongodb": "^6.3.0",
     "prisma": "5.7.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.19.3",
@@ -31,6 +38,6 @@
     "typescript": "^5.0.4"
   },
   "engines": {
-    "node": "20.10.0"
+    "node": "21.6.1"
   }
 }
