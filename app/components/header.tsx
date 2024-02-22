@@ -1,23 +1,55 @@
 import WRCLogo from "app/public/images/wrclogo.png";
-
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Link } from "@remix-run/react";
 export function Header() {
   return (
-    <div className="bg-slate-800 flex-row w-full h-32 flex ">
-      <div className="flex h-full pt-3 pl-3">
-        <img src={WRCLogo} className="w-52 h-24 flex " />
+    <div className=" flex-row w-full h-32 justify-between flex ">
+      <div className="flex h-full  items-center">
+        <div>
+          <img src={WRCLogo} className="w-52 h-24 flex " />
+        </div>
       </div>
-      <div className="flex items-center justify-center w-full">
-        <nav className="space-x-4">
-          <div className="font-medium font-sans">
+      <div className="flex items-center  w-fit h-full">
+        <nav>
+          <div className="font-medium font-sans mx-auto items-center justify-center">
             {navItems.map((item) => {
               return (
-                <a href={item.href}>
-                  <button className="bg-orange-200">{item.name}</button>
-                </a>
+                <Link to={item.href}>
+                  <Button className="text-slate-400" variant="ghost">
+                    {item.name}
+                  </Button>
+                </Link>
               );
             })}
           </div>
         </nav>
+      </div>
+      <div className=" h-full items-center flex">
+        <div className="flex h-fit ">
+          <DropdownMenu>
+            <DropdownMenuTrigger>
+              <Button className="text-slate-400" variant="ghost">
+                Actions
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuLabel>My Account</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>Profile</DropdownMenuItem>
+              <DropdownMenuItem>Billing</DropdownMenuItem>
+              <DropdownMenuItem>Team</DropdownMenuItem>
+              <DropdownMenuItem>Subscription</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
       </div>
     </div>
   );
@@ -25,5 +57,5 @@ export function Header() {
 
 const navItems = [
   { name: "Decades", href: "/" },
-  { name: "Hall of Fame", href: "/about" },
+  { name: "Hall of Fame", href: "hof.tsx" },
 ];
