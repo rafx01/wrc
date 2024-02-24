@@ -11,11 +11,11 @@ export const meta: V2_MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="overflow-auto h-screen mx-auto px-10 bg-zinc-950 flex flex-col">
+    <div className="overflow-auto space-y-10 h-screen mx-auto px-10 bg-[#141414] flex flex-col">
       <div className="flex">
         <Header />
       </div>
-      <div className="flex h-full space-y-10">
+      <div className="flex h-full shrink-0">
         <HeroSection />
       </div>
       <div className="flex h-full">
