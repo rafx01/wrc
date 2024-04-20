@@ -1,9 +1,12 @@
 import subaru from "app/public/images/subaru.jpg";
 import { content } from "./decades-content";
+import { getMongoData } from "~/hooks/useGetData";
 type TDecades = {
   title: string;
   description: string;
 };
+
+const data = getMongoData();
 
 export function Decades() {
   return (
@@ -17,7 +20,7 @@ export function Decades() {
 
 function CarCard({ title, description }: TDecades) {
   return (
-    <div className="border-2 border-slate-400 bg-[#141414] flex w-80 h-96 rounded-lg">
+    <div className="border-2 border-slate-700 bg-[#141414] flex w-80 h-96 rounded-lg">
       <div className=" space-y-2">
         <div>
           <img className="rounded-t-lg" src={subaru} alt="..." />
